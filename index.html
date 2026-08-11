@@ -185,6 +185,36 @@
 
     .btn:active { transform: translateY(0); }
 
+    .btn-outline {
+      display: block;
+      width: 100%;
+      padding: 14px 0;
+      background: transparent;
+      color: var(--white);
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 8px;
+      border: 1px solid var(--border-hover);
+      transition: border-color 0.15s ease, background 0.15s ease, transform 0.12s ease;
+    }
+
+    .btn-outline:hover {
+      border-color: #888;
+      background: rgba(255,255,255,0.05);
+      transform: translateY(-1px);
+    }
+
+    .btn-outline:active { transform: translateY(0); }
+
+    .guide-emoji {
+      font-size: 28px;
+      line-height: 1;
+    }
+
     footer {
       border-top: 1px solid var(--border);
       width: 100%;
@@ -240,6 +270,41 @@
       </a>
     </div>
   </section>
+
+  <div class="divider"></div>
+
+  <section class="cards" style="padding-bottom: 0;">
+    <div style="grid-column: 1 / -1; margin-bottom: 8px;">
+      <p class="eyebrow" style="margin-bottom: 6px;">Seus bônus</p>
+      <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(22px, 4vw, 32px); font-weight: 700; letter-spacing: -0.02em; color: var(--white); text-align: center;">Baixe os Guias do Bunker</h2>
+    </div>
+
+    <div class="card">
+      <div class="guide-emoji">📘</div>
+      <span class="card-tag">Bônus 1</span>
+      <h2 class="card-title">As 17 Leis do Sucesso</h2>
+      <p class="card-desc">Os princípios fundamentais que separam quem executa de quem apenas planeja. Leitura direta, sem enrolação.</p>
+      <a class="btn-outline" href="https://drive.google.com/drive/folders/147KefSudxs1v2Oiu6rK03dzMCXfHlmMu?usp=sharing" target="_blank" rel="noopener">BAIXAR GUIA →</a>
+    </div>
+
+    <div class="card">
+      <div class="guide-emoji">🧠</div>
+      <span class="card-tag">Bônus 2</span>
+      <h2 class="card-title">Liberdade Mental</h2>
+      <p class="card-desc">Como esvaziar a mente, eliminar o ruído e recuperar o controle total sobre seus pensamentos e energia.</p>
+      <a class="btn-outline" href="https://drive.google.com/drive/folders/147KefSudxs1v2Oiu6rK03dzMCXfHlmMu?usp=sharing" target="_blank" rel="noopener">BAIXAR GUIA →</a>
+    </div>
+
+    <div class="card" style="grid-column: 1 / -1; max-width: 420px; margin: 0 auto; width: 100%;">
+      <div class="guide-emoji">🔇</div>
+      <span class="card-tag">Bônus 3</span>
+      <h2 class="card-title">Silenciando Distrações</h2>
+      <p class="card-desc">O protocolo prático para blindar seu foco contra interrupções digitais e criar um ambiente de execução de alto nível.</p>
+      <a class="btn-outline" href="https://drive.google.com/drive/folders/147KefSudxs1v2Oiu6rK03dzMCXfHlmMu?usp=sharing" target="_blank" rel="noopener">BAIXAR GUIA →</a>
+    </div>
+  </section>
+
+  <div class="divider" style="margin-top: 48px;"></div>
 
   <footer>
     &copy; 2026 O Bunker. Todos os direitos reservados.
