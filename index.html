@@ -236,6 +236,46 @@
       line-height: 1;
     }
 
+    .steps {
+      width: 100%;
+      max-width: 860px;
+      padding: 40px 24px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .step {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+    }
+
+    .step-num {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 5px 10px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .step-text {
+      font-size: 14px;
+      color: #999;
+      line-height: 1.6;
+    }
+
+    .step-text strong {
+      color: var(--text);
+      font-weight: 500;
+    }
+
     footer {
       border-top: 1px solid var(--border);
       width: 100%;
@@ -261,6 +301,21 @@
   </header>
 
   <div class="divider"></div>
+
+  <div class="steps">
+    <div class="step">
+      <span class="step-num">01</span>
+      <p class="step-text"><strong>Clique em "Baixar Agora"</strong> no template desejado abaixo.</p>
+    </div>
+    <div class="step">
+      <span class="step-num">02</span>
+      <p class="step-text">Você será levado ao Google Sheets. Clique em <strong>Arquivo → Fazer uma cópia</strong> para salvar no seu Drive.</p>
+    </div>
+    <div class="step">
+      <span class="step-num">03</span>
+      <p class="step-text">Acesse de qualquer dispositivo, a qualquer momento. <strong>O acesso é vitalício.</strong></p>
+    </div>
+  </div>
 
   <section class="cards">
     <div class="card">
