@@ -231,6 +231,40 @@
 
     .btn-outline:active { transform: translateY(0); }
 
+    .card-meta {
+      border-top: 1px solid var(--border);
+      padding-top: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .card-meta-item {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .card-meta-label {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .card-meta-text {
+      font-size: 12px;
+      color: #666;
+      line-height: 1.55;
+    }
+
+    .card-meta-text strong {
+      color: #888;
+      font-weight: 500;
+    }
+
     .guide-emoji {
       font-size: 28px;
       line-height: 1;
@@ -403,29 +437,6 @@
     </div>
   </div>
 
-  <div class="info-block">
-    <div class="info-card">
-      <h3>Recomendamos usar o Google Sheets</h3>
-      <ul>
-        <li>100% gratuito — basta ter uma conta Google.</li>
-        <li>Funciona em qualquer dispositivo (inclusive pelo celular).</li>
-        <li>Sem necessidade de instalação.</li>
-        <li>Todas as fórmulas e funções são totalmente compatíveis.</li>
-        <li>Acesse de qualquer lugar.</li>
-      </ul>
-    </div>
-
-    <div class="info-card">
-      <h3>Opcional: Baixar como arquivo Excel</h3>
-      <p>Se preferir trabalhar com o Microsoft Excel, você pode exportar o template facilmente:</p>
-      <ol>
-        <li>Abra sua cópia no Google Sheets.</li>
-        <li>Clique em <strong>"Arquivo" → "Fazer download" → "Microsoft Excel (.xlsx)"</strong>.</li>
-        <li>Abra o arquivo no Excel.</li>
-      </ol>
-    </div>
-  </div>
-
   <section class="cards">
     <div class="card">
       <div class="card-image"><img src="https://res.cloudinary.com/daunhggta/image/upload/v1786484791/6_rpdlza.webp" alt="Rastreador de Rotina" loading="lazy" /></div>
@@ -437,6 +448,16 @@
         <li>100% gratuito para usar</li>
         <li>Acesse de qualquer dispositivo</li>
       </ul>
+      <div class="card-meta">
+        <div class="card-meta-item">
+          <span class="card-meta-label">Recomendamos</span>
+          <p class="card-meta-text">Use o Google Sheets — gratuito, sem instalação, funciona em qualquer dispositivo.</p>
+        </div>
+        <div class="card-meta-item">
+          <span class="card-meta-label">Opcional — Excel</span>
+          <p class="card-meta-text">Na sua cópia: <strong>Arquivo → Fazer download → Microsoft Excel (.xlsx)</strong></p>
+        </div>
+      </div>
       <a class="btn" href="https://docs.google.com/spreadsheets/d/1fC8hP4XmIZwM2URw7dTzBRo-H2HAM23lxRpEN-DOV3A/copy" target="_blank" rel="noopener">
         Baixar Agora
       </a>
@@ -452,6 +473,16 @@
         <li>100% gratuito para usar</li>
         <li>Acesse de qualquer dispositivo</li>
       </ul>
+      <div class="card-meta">
+        <div class="card-meta-item">
+          <span class="card-meta-label">Recomendamos</span>
+          <p class="card-meta-text">Use o Google Sheets — gratuito, sem instalação, funciona em qualquer dispositivo.</p>
+        </div>
+        <div class="card-meta-item">
+          <span class="card-meta-label">Opcional — Excel</span>
+          <p class="card-meta-text">Na sua cópia: <strong>Arquivo → Fazer download → Microsoft Excel (.xlsx)</strong></p>
+        </div>
+      </div>
       <a class="btn" href="https://docs.google.com/spreadsheets/d/1UjmYkbP3P9pqGQm78zD6-tEncMnottY-iDuGt7zdSLw/copy" target="_blank" rel="noopener">
         Baixar Agora
       </a>
