@@ -114,6 +114,7 @@
       width: calc(100% + 64px);
       aspect-ratio: 16 / 9;
       flex-shrink: 0;
+      overflow: hidden;
     }
 
     .card-image img {
@@ -122,6 +123,11 @@
       object-fit: cover;
       object-position: top;
       display: block;
+    }
+
+    .card-image img.zoom {
+      transform: scale(1.6);
+      transform-origin: top center;
     }
 
     .card:hover {
@@ -306,7 +312,7 @@
     </div>
 
     <div class="card">
-      <div class="card-image"><img src="https://res.cloudinary.com/daunhggta/image/upload/v1786484791/SILÊNCIO_ATÉ_VENCER_udlgaw.webp" alt="Liberdade Mental" loading="lazy" /></div>
+      <div class="card-image"><img src="https://res.cloudinary.com/daunhggta/image/upload/v1786484791/SILÊNCIO_ATÉ_VENCER_udlgaw.webp" alt="Liberdade Mental" loading="lazy" class="zoom" /></div>
       <span class="card-tag">Bônus 2</span>
       <h2 class="card-title">Liberdade Mental</h2>
       <p class="card-desc">Como esvaziar a mente, eliminar o ruído e recuperar o controle total sobre seus pensamentos e energia.</p>
