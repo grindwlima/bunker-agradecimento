@@ -281,9 +281,13 @@
       max-width: 860px;
       padding: 0 24px;
       margin-top: 32px;
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    @media (max-width: 600px) {
+      .info-block { grid-template-columns: 1fr; }
     }
 
     .info-card {
@@ -379,7 +383,6 @@
     <div>
       <p class="eyebrow">Seus templates</p>
       <h1>Baixe suas planilhas</h1>
-      <p class="subtitle">Escolha o template abaixo e clique em "Baixar Agora". Voc&#234; ser&#225; redirecionado diretamente para a tela de c&#243;pia no Google Sheets.</p>
     </div>
   </header>
 
@@ -403,7 +406,6 @@
   <div class="info-block">
     <div class="info-card">
       <h3>Recomendamos usar o Google Sheets</h3>
-      <p>Este rastreador funciona no Excel, mas performa melhor no Google Sheets. O Google Sheets é ideal porque:</p>
       <ul>
         <li>100% gratuito — basta ter uma conta Google.</li>
         <li>Funciona em qualquer dispositivo (inclusive pelo celular).</li>
