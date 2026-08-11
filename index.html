@@ -231,9 +231,170 @@
 
     .btn-outline:active { transform: translateY(0); }
 
+    .card-meta {
+      border-top: 1px solid var(--border);
+      padding-top: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .card-meta-item {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .card-meta-label {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .card-meta-text {
+      font-size: 12px;
+      color: #666;
+      line-height: 1.55;
+    }
+
+    .card-meta-text strong {
+      color: #888;
+      font-weight: 500;
+    }
+
     .guide-emoji {
       font-size: 28px;
       line-height: 1;
+    }
+
+    .steps {
+      width: 100%;
+      max-width: 860px;
+      padding: 40px 24px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .step {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+    }
+
+    .step-num {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 5px 10px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .step-text {
+      font-size: 14px;
+      color: #999;
+      line-height: 1.6;
+    }
+
+    .step-text strong {
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    .info-block {
+      width: 100%;
+      max-width: 860px;
+      padding: 0 24px;
+      margin-top: 32px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    @media (max-width: 600px) {
+      .info-block { grid-template-columns: 1fr; }
+    }
+
+    .info-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 28px 32px;
+    }
+
+    .info-card h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 10px;
+      letter-spacing: -0.01em;
+    }
+
+    .info-card p {
+      font-size: 13.5px;
+      color: var(--muted);
+      line-height: 1.6;
+      margin-bottom: 12px;
+    }
+
+    .info-card ul, .info-card ol {
+      padding-left: 4px;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+
+    .info-card ul li, .info-card ol li {
+      font-size: 13px;
+      color: #999;
+      line-height: 1.5;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .info-card ul li::before {
+      content: '';
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: #444;
+      flex-shrink: 0;
+      margin-top: 7px;
+    }
+
+    .info-card ol {
+      counter-reset: ol-counter;
+      list-style: none;
+    }
+
+    .info-card ol li {
+      counter-increment: ol-counter;
+    }
+
+    .info-card ol li::before {
+      content: counter(ol-counter) ".";
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--muted);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .info-card ol li strong {
+      color: var(--text);
+      font-weight: 500;
     }
 
     footer {
@@ -256,11 +417,25 @@
     <div>
       <p class="eyebrow">Seus templates</p>
       <h1>Baixe suas planilhas</h1>
-      <p class="subtitle">Escolha o template abaixo e clique em "Baixar Agora". Voc&#234; ser&#225; redirecionado diretamente para a tela de c&#243;pia no Google Sheets.</p>
     </div>
   </header>
 
   <div class="divider"></div>
+
+  <div class="steps">
+    <div class="step">
+      <span class="step-num">01</span>
+      <p class="step-text"><strong>Clique em "Baixar Agora"</strong> no template desejado abaixo.</p>
+    </div>
+    <div class="step">
+      <span class="step-num">02</span>
+      <p class="step-text">Você será levado ao Google Sheets. Clique em <strong>Arquivo → Fazer uma cópia</strong> para salvar no seu Drive.</p>
+    </div>
+    <div class="step">
+      <span class="step-num">03</span>
+      <p class="step-text">Acesse de qualquer dispositivo, a qualquer momento. <strong>O acesso é vitalício.</strong></p>
+    </div>
+  </div>
 
   <section class="cards">
     <div class="card">
@@ -273,6 +448,16 @@
         <li>100% gratuito para usar</li>
         <li>Acesse de qualquer dispositivo</li>
       </ul>
+      <div class="card-meta">
+        <div class="card-meta-item">
+          <span class="card-meta-label">Recomendamos</span>
+          <p class="card-meta-text">Use o Google Sheets — gratuito, sem instalação, funciona em qualquer dispositivo.</p>
+        </div>
+        <div class="card-meta-item">
+          <span class="card-meta-label">Opcional — Excel</span>
+          <p class="card-meta-text">Na sua cópia: <strong>Arquivo → Fazer download → Microsoft Excel (.xlsx)</strong></p>
+        </div>
+      </div>
       <a class="btn" href="https://docs.google.com/spreadsheets/d/1fC8hP4XmIZwM2URw7dTzBRo-H2HAM23lxRpEN-DOV3A/copy" target="_blank" rel="noopener">
         Baixar Agora
       </a>
@@ -288,6 +473,16 @@
         <li>100% gratuito para usar</li>
         <li>Acesse de qualquer dispositivo</li>
       </ul>
+      <div class="card-meta">
+        <div class="card-meta-item">
+          <span class="card-meta-label">Recomendamos</span>
+          <p class="card-meta-text">Use o Google Sheets — gratuito, sem instalação, funciona em qualquer dispositivo.</p>
+        </div>
+        <div class="card-meta-item">
+          <span class="card-meta-label">Opcional — Excel</span>
+          <p class="card-meta-text">Na sua cópia: <strong>Arquivo → Fazer download → Microsoft Excel (.xlsx)</strong></p>
+        </div>
+      </div>
       <a class="btn" href="https://docs.google.com/spreadsheets/d/1UjmYkbP3P9pqGQm78zD6-tEncMnottY-iDuGt7zdSLw/copy" target="_blank" rel="noopener">
         Baixar Agora
       </a>
