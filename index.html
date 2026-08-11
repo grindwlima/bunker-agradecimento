@@ -276,6 +276,89 @@
       font-weight: 500;
     }
 
+    .info-block {
+      width: 100%;
+      max-width: 860px;
+      padding: 0 24px;
+      margin-top: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .info-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 28px 32px;
+    }
+
+    .info-card h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 10px;
+      letter-spacing: -0.01em;
+    }
+
+    .info-card p {
+      font-size: 13.5px;
+      color: var(--muted);
+      line-height: 1.6;
+      margin-bottom: 12px;
+    }
+
+    .info-card ul, .info-card ol {
+      padding-left: 4px;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+
+    .info-card ul li, .info-card ol li {
+      font-size: 13px;
+      color: #999;
+      line-height: 1.5;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .info-card ul li::before {
+      content: '';
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: #444;
+      flex-shrink: 0;
+      margin-top: 7px;
+    }
+
+    .info-card ol {
+      counter-reset: ol-counter;
+      list-style: none;
+    }
+
+    .info-card ol li {
+      counter-increment: ol-counter;
+    }
+
+    .info-card ol li::before {
+      content: counter(ol-counter) ".";
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--muted);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .info-card ol li strong {
+      color: var(--text);
+      font-weight: 500;
+    }
+
     footer {
       border-top: 1px solid var(--border);
       width: 100%;
@@ -314,6 +397,30 @@
     <div class="step">
       <span class="step-num">03</span>
       <p class="step-text">Acesse de qualquer dispositivo, a qualquer momento. <strong>O acesso é vitalício.</strong></p>
+    </div>
+  </div>
+
+  <div class="info-block">
+    <div class="info-card">
+      <h3>Recomendamos usar o Google Sheets</h3>
+      <p>Este rastreador funciona no Excel, mas performa melhor no Google Sheets. O Google Sheets é ideal porque:</p>
+      <ul>
+        <li>100% gratuito — basta ter uma conta Google.</li>
+        <li>Funciona em qualquer dispositivo (inclusive pelo celular).</li>
+        <li>Sem necessidade de instalação.</li>
+        <li>Todas as fórmulas e funções são totalmente compatíveis.</li>
+        <li>Acesse de qualquer lugar.</li>
+      </ul>
+    </div>
+
+    <div class="info-card">
+      <h3>Opcional: Baixar como arquivo Excel</h3>
+      <p>Se preferir trabalhar com o Microsoft Excel, você pode exportar o template facilmente:</p>
+      <ol>
+        <li>Abra sua cópia no Google Sheets.</li>
+        <li>Clique em <strong>"Arquivo" → "Fazer download" → "Microsoft Excel (.xlsx)"</strong>.</li>
+        <li>Abra o arquivo no Excel.</li>
+      </ol>
     </div>
   </div>
 
